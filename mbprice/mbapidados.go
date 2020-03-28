@@ -5,8 +5,20 @@ import (
 	"errors"
 	"io/ioutil"
 	"log"
+	"net/http"
 	"strconv"
+	"time"
 )
+
+const tr = &http.Transport{
+	MaxIdleConns:        100,
+	MaxIdleConnsPerHost: 20,
+}
+
+const httpClient = http.Client{
+	Timeout:   time.Duration(30 * time.Second),
+	Transport: tr,
+}
 
 const mbAPIDadosURL = "https://www.mercadobitcoin.net/api/"
 
