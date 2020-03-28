@@ -1,4 +1,4 @@
-package go-mbprice
+package mbprice
 
 //Price represents cryptoasset's price
 type Price struct {

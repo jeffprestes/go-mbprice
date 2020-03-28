@@ -1,4 +1,4 @@
-package priceconverter
+package mbprice
 
 import "strconv"
 
