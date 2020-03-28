@@ -10,12 +10,12 @@ import (
 	"time"
 )
 
-const tr = &http.Transport{
+var tr = &http.Transport{
 	MaxIdleConns:        100,
 	MaxIdleConnsPerHost: 20,
 }
 
-const httpClient = http.Client{
+var httpClient = http.Client{
 	Timeout:   time.Duration(30 * time.Second),
 	Transport: tr,
 }
